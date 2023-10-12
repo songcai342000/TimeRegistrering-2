@@ -1,0 +1,35 @@
+<div class="main">
+  <div class="background">
+<div class="base">
+  <div class="p-0 m-md-2">
+    <!-- <form #searchForm="ngForm" ngSubmit="sendConditions(searchCondition)">-->
+    <div id="explain">(Search by project name, date or both. If no search condition is chosen, it shows all your timesheets)</div>
+    <div class="form-group">
+      <label for="projectName">Select Project</label>
+      <select class="form-control"
+              (change)="getNameValue($event)" value={{projectName}}>
+        <option value=""></option>
+        <option value="ABC kidgarden construction">ABC kidgarden construction</option>
+        <option value="Sunshine primary school construction">Sunshine primary school construction</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="date">Select Date</label>
+      <input class="form-control" type="date"
+             (change)="getDateValue($event)" value={{date}}>
+    </div>
+
+    <button type="submit" class="btn border-3 text-white"
+            style="font-size: 1em" (click)="sendConditions()">
+      Submit
+    </button>
+    <button type="button" class="btn border-3 text-white"
+            (click)="reset()" style="font-size: 1em" id="resetBtn">
+      Reset
+    </button>
+    <!--</form>-->
+  </div>
+</div>
+  </div>
+</div>
+

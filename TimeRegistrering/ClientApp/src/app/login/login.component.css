@@ -1,0 +1,52 @@
+i {
+    font-size: 36px;
+}
+
+.main {
+  margin: 0;
+  background-color: #f2f2f2;
+  padding-top: 4em;
+  padding-bottom: 6em;
+}
+
+.loginBackground {
+  background: aliceblue;
+  border: 1px solid #ddd;
+}
+
+
+input {
+  height: 2em;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+button {
+  /*height: 4vh;
+  width: 6em;*/
+  padding: 0.25em 0.8em 0.25em 0.8em;
+  height: auto;
+  width: auto;
+  border-radius: 25px;
+  background: #b300b3;
+  vertical-align: central;
+  font-size: 0.9em;
+  font-weight: 600;
+  border: none;
+}
+
+  button:hover {
+    background-color: #ff33ff;
+  }
+
+  button:active {
+    background-color: #ff66ff;
+  }
+
+  button:visited {
+    background-color: #ff66ff;
+  }
+
+label {
+    font-weight: 600;
+}

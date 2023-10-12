@@ -1,0 +1,65 @@
+<!--<div class="base">
+  <form #timeForm="ngForm" (ngSubmit)="newRegistration(timeRegistration)">
+    <div class="card-head"><label class="titleLabel">Ny Registering</label></div>
+    <div class="form-group">
+      <label for="projectName">Project</label>
+      <select class="form-control"
+              name="projectName"
+              required
+              [(ngModel)]="timeRegistration.projectName"
+              #projectName="ngModel">
+        <option value="ABC kidgarden construction">ABC kidgarden construction</option>
+        <option value="Sunshine primary school construction">Sunshine primary school construction</option>
+      </select>
+      <div *ngIf="!projectName?.valid && (projectName?.dirty || projectName?.touched)">
+        <div *ngIf="projectName.errors.required">
+          Feltet kan ikke være tømt
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="comment">Comment</label>
+      <input class="form-control"
+             name="comment"
+             required maxlength="100" pattern="^.*?[a-zA-ZåÅøØæÆ]{2,}.*?$"
+             [(ngModel)]="timeRegistration.comment"
+             #comment="ngModel" placeholder="Skriv inn 1 - 100 tegn">
+      <div *ngIf="!comment?.valid && (comment?.dirty || comment?.touched)">
+        <div *ngIf="comment.errors.required">
+          Feltet kan ikke være tømt
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="hours">Antall Timer</label>
+      <input type="text" class="form-control"
+             name="hours"
+             required pattern="^[0-9]{1,3}$"
+             [(ngModel)]="timeRegistration.hours"
+             #hours="ngModel" value={{newHours}} (change)="getNewHours($event)">
+      <div *ngIf="!hours?.valid && (hours?.dirty || hours?.touched)">
+        <div *ngIf="hours.errors.required">
+          Antall timer må fylles inn
+        </div>
+        <div *ngIf="hours.invalid">
+          Fyll inn et antall mellom 0 - 999
+        </div>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-secondary"
+            [disabled]="!timeForm.form.valid" style="font-size: 1em">
+      Lagre
+    </button>
+    <button type="button" class="btn btn-secondary"
+            (click)="timeForm.reset()" style="font-size: 1em" id="resetBtn">
+      Nullstille
+    </button>-->
+<!--
+<label style="visibility: hidden" name="userId" [(ngModel)]="timeRegistration.userId"
+       #userId="ngModel"></label>-->
+<!--<input type="text" *ngIf="hourSum"  style="visibility: hidden" (change)="showSum($event)">
+<input type="text" *ngIf="id" style="visibility: hidden" name="userId" [(ngModel)]="timeRegistration.userId"
+       #userId="ngModel">
+  </form>
+  </div>-->

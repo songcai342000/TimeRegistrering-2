@@ -1,0 +1,72 @@
+<div class="main">
+  <form registrationForm="ngForm">
+    <div>
+      <div><label class="invisible">Empty</label></div>
+      <div id="topTitle"><h4>Registrate your working time</h4></div>
+    </div>
+        <div>
+          <div>
+            <div class="pb-0"><label for="projectName" id="projectLbl">Project Name</label></div>
+            <div id="selectDiv">
+              <select name="projectName" id="projectName" [(ngModel)]="timeRegistration.projectName" #projectName="ngModel" value={{project}} (change)="projectErrorMessage($event)" (click)="loadOptions()">
+                {{projectName}}
+                <!--
+  <option>
+  </option>
+  <option>
+    ABC kidgarden construction
+  </option>
+  <option>
+    Sunshine primary school construction
+  </option>
+   -->
+              </select>
+                <div id="projectError" class="errorText">
+                </div>
+            </div>
+          </div>
+          <div>
+            <div class="pb-0"><label for="start-time">Comment</label></div>
+            <div>
+              <input type="text" id="comment"
+                     name="comment" pattern=".*"
+                     minlength="2" [(ngModel)]="timeRegistration.comment" #comment="ngModel" value={{com}}>
+            </div>
+          </div>
+          <div>
+            <div class="pb-0">
+              <label for="end-time">Duration (hrs)</label>
+            </div>
+            <div>
+              <input type="text" id="hours"
+                     min="0" max="24" step="0.5"
+                     name="hours" [(ngModel)]="timeRegistration.hours" #hours="ngModel" value={{hrs}} (change)="durationErrorMessage($event)">
+              <div id="durationError" class="errorText">
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="pb-0">
+              <label for="date">Date</label>
+            </div>
+            <div>
+              <!--<input type="datetime-local" id="date"
+  min={{earliestDate}}
+  required name="date" [(ngModel)]="timeRegistration.registrationTime" #date="ngModel" placeholder="yyyy-mm-dd">-->
+              <input type="date" id="date" class="testDate"
+                     min={{earliestDate}}
+                     required name="date" [(ngModel)]="timeRegistration.registrationTime" #date="ngModel" value={{time}} style="width: 9.73em; height: 2.2em; margin-left: 0.05em; box-sizing: border-box;" (change)="dateErrorMessage($event)">
+              <div id="dateError" class="errorText">
+              </div>
+            </div>
+          </div>
+          <div>
+            <div><input type="hidden" value={{userId}}></div>
+            <div id="btnContainer">
+              <button type="submit" class="mr-2" id="registrationBtn" (click)="registrate(timeRegistration)" style="box-sizing: border-box">Submit</button><div class="reflection"></div>
+            </div>
+          </div>
+        </div>
+</form>
+</div>
+
