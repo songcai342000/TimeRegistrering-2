@@ -60,18 +60,18 @@ import { Subfooter0Component } from './subfooter0/subfooter0.component';
     SearchDashboardModule,
     MoreinforModule,
     RouterModule.forRoot([
-      { path: 'moreinfor', loadChildren: () => import('./moreinfor/moreinfor.module').then(m => m.MoreinforModule) },
-      { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'moreinfor', component:MoreinforComponent },
-      { path: 'add', component: AddComponent, canActivate: [AdminGuard] },
-      { path: 'delete', component: DeleteComponent },
-      { path: 'delete/:id', component: DeleteComponent },
-      { path: 'search-dashboard/list', component: ListComponent },
-      { path: 'login', component: LoginComponent },
-      { path: 'alltimesheets', component: AlltimesheetsComponent },
-      { path: 'user-home', component: UserHomeComponent, canActivate: [AuthGuard] },
-      { path: 'admin-home', component: AdminHomeComponent, canActivate: [AdminGuard] }  
-    ])
+    { path: 'moreinfor', loadChildren: () => import('./moreinfor/moreinfor.module').then(m => m.MoreinforModule) },
+    { path: '', component: HomeComponent, pathMatch: 'full' },
+    { path: 'moreinfor', component: MoreinforComponent },
+    { path: 'add', component: AddComponent, canActivate: [AdminGuard] },
+    { path: 'delete', component: DeleteComponent },
+    { path: 'delete/:id', component: DeleteComponent },
+    { path: 'search-dashboard/list', component: ListComponent },
+    { path: 'login', component: LoginComponent },
+    { path: 'alltimesheets', component: AlltimesheetsComponent },
+    { path: 'user-home', component: UserHomeComponent, canActivate: [AuthGuard] },
+    { path: 'admin-home', component: AdminHomeComponent, canActivate: [AdminGuard] }
+], { relativeLinkResolution: 'legacy' })
   ],
   providers: [],
   entryComponents: [SearchComponent],

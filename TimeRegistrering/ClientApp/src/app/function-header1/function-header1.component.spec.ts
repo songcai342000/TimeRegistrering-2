@@ -1,4 +1,4 @@
-import { async, ComponentFixture, fakeAsync, TestBed, tick } from '@angular/core/testing';
+import { ComponentFixture, fakeAsync, TestBed, tick, waitForAsync } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { TimeService } from '../time.service';
 import { AlltimesheetsComponent } from '../alltimesheets/alltimesheets.component';
@@ -31,7 +31,7 @@ describe('FunctionHeader1Component', () => {
   let projectName: string;
   let fixture: ComponentFixture<FunctionHeader1Component>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
    
     const spy1 = jasmine.createSpyObj('TimeService', ['registrate']);
     const spy2 = jasmine.createSpyObj('TimeService', ['getUserId']);
