@@ -34,7 +34,9 @@ export class SidebarComponent implements OnInit {
   }
 
   logout() {
-    this.authService.logout();
+    if (confirm('Are you sure you will log out?')) {
+      this.authService.logout();
+    }
   }
 
 }

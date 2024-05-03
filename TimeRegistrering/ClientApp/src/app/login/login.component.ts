@@ -37,11 +37,13 @@ export class LoginComponent implements OnInit {
     }
     this.loading = true;
     const returnUrl = this.route.snapshot.queryParamMap.get('returnUrl') || '/';
+    alert(returnUrl); 
     this.authService.login(this.loginForm.value)
       .pipe(first())
       .subscribe(
         () => {
-          this.router.navigate([returnUrl]);
+           this.router.navigate([returnUrl]);
+          //this.router.parseUrl(returnUrl);
         },
         () => {
           this.loading = false;
